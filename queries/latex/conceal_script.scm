@@ -1,6 +1,6 @@
 ; superscripts and subscripts conceals
 (text
-  word: (subscript) @conceal
+  word: (subscript) @conceal @markup.math.latex
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal text_mode label_definition)
   (#any-of? @conceal 
@@ -38,7 +38,7 @@
    "_\\." "‸"))
 
 (text
-  word: (word) @conceal
+  word: (word) @conceal @markup.math.latex
   (#has-ancestor? @conceal subscript)
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal text_mode label_definition)
@@ -76,7 +76,7 @@
    "_\\." "‸"))
 
 (text
-  word: (subscript) @conceal
+  word: (subscript) @conceal @markup.math.latex
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)
   (#any-of? @conceal "_+" "_-" "_/")
@@ -86,7 +86,7 @@
    "_/" "ˏ"))
 
 (text
-  word: (operator) @conceal
+  word: (operator) @conceal @markup.math.latex
   (#has-ancestor? @conceal subscript)
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)
@@ -97,7 +97,7 @@
    "/" "ˏ"))
 
 (text
-  word: (superscript) @conceal
+  word: (superscript) @conceal @markup.math.latex
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)
   (#any-of? @conceal
@@ -164,7 +164,7 @@
   "^W" "ᵂ"))
 
 (text
-  word: (word) @conceal
+  word: (word) @conceal @markup.math.latex
   (#has-ancestor? @conceal superscript)
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)
@@ -229,7 +229,7 @@
   "W" "ᵂ"))
 
 (text
-  word: (superscript) @conceal
+  word: (superscript) @conceal @markup.math.latex
   (#any-of? @conceal
   "^+" "^-" "^<" "^>" "^/" "^=" "^\.")
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
@@ -244,7 +244,7 @@
   "^=" "˭"))
 
 (text
-  word: (operator) @conceal
+  word: (operator) @conceal @markup.math.latex
   (#has-ancestor? @conceal superscript)
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)

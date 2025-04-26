@@ -1,6 +1,6 @@
 ; math conceals
 (generic_command
-  command: ((command_name) @conceal
+  command: ((command_name) @conceal @markup.math.latex
   (#any-of? @conceal
    "\\|" "\\amalg" "\\angle" "\\approx" 
    "\\ast" "\\asymp" "\\backslash" "\\bigcap" 

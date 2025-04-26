@@ -1,6 +1,6 @@
 ; greek conceal
 (generic_command
-  command: ((command_name) @conceal 
+  command: ((command_name) @conceal @markup.math.latex
   (#any-of? @conceal 
    "\\alpha" "\\beta" "\\gamma" "\\delta"
    "\\epsilon" "\\varepsilon" "\\zeta" "\\eta"

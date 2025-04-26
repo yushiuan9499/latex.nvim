@@ -5,7 +5,7 @@
 
 ((generic_command
    command: (command_name)
-   arg: (curly_group)) @conceal
+   arg: (curly_group)) @conceal @markup.math.latex
  (#any-of? @conceal 
   "\\mathbb{A}" "\\mathbb{B}" "\\mathbb{C}" "\\mathbb{D}" "\\mathbb{E}" 
   "\\mathbb{F}" "\\mathbb{G}" "\\mathbb{H}" "\\mathbb{I}" "\\mathbb{J}" 
