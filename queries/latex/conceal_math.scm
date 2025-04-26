@@ -29,7 +29,7 @@
    "\\surd" "\\swarrow" "\\times" "\\to" "\\top" 
    "\\triangle" "\\triangleleft" "\\triangleright" "\\uparrow" 
    "\\Uparrow" "\\updownarrow" "\\Updownarrow" "\\vdash" "\\vdots" 
-   "\\vee" "\\wedge" "\\wp" "\\wr"))
+   "\\vee" "\\wedge" "\\wp" "\\wr" "\\%"))
   (#has-ancestor? @conceal math_environment inline_formula displayed_equation)
   (#not-has-ancestor? @conceal label_definition text_mode)
   (#set-pairs! @conceal conceal
@@ -183,7 +183,8 @@
    "\\vee" "∨"
    "\\wedge" "∧"
    "\\wp" "℘"
-   "\\wr" "≀"))
+   "\\wr" "≀"
+   "\\%" "%"))
 
 (generic_command
   command: ((command_name) @conceal
